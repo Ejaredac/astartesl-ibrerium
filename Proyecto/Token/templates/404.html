@@ -1,0 +1,26 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+		body { background: #e8f1f9; }
+	</style>
+{% endblock %}
+
+{% block title %}
+Error 404
+
+{% endblock %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<a href="{{url_for('inicio')}}">Astartes Librerium - La libreria</a>
+		
+	</div>
+  </nav>
+<h1>{{error}}</h1>
+{% endblock %}

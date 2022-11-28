@@ -1,0 +1,38 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+		body { background: #e8f1f9; }
+	</style>
+{% endblock %}
+{% block title %}
+Usuario detalle
+{% endblock %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <a href="{{url_for('inicio')}}">Astartes Librerium - La libreria</a>
+      
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+        <h1>{{user.id}}</h1>
+        <h2>{{user.email}}</h1>
+        <h2>Fecha de registro: {{user.registered_on}}</h2>
+        <h2>Admin:{{user.admin}}</h3>
+        <img src="data:image/jpg;base64,{{imagen}}" alt="Red dot" width="500">
+        <a href="/download/user/{{id}}">Descargar PDF</a> 
+    </div>
+  </div>
+</div>
+
+{% endblock %}

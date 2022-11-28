@@ -1,0 +1,56 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block styles %}
+{{ super() }}
+	<style>
+		body { background: #e8f1f9; }
+	</style>
+{% endblock %}
+
+{% block title %}
+Astartes Librerium - La libreria
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <a href="{{url_for('inicio')}}">Astartes Librerium - La libreria</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('appuser.login')}}">Login
+                    <span class=" sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('appuser.registro')}}">Registro
+                    <span class=" sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('imageUser.upload')}}">Imagen de Perfil
+                    <span class=" sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('appuser.adminpage')}}">Admin
+                    <span class=" sr-only">(current)</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+      <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+          <h1>Inicio</h1>
+          <a class="nav-link" href="{{url_for('appuser.usuariopant')}}">Pantalla de usuario
+            <span class=" sr-only">(current)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

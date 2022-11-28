@@ -1,0 +1,8 @@
+pip install
+flask
+flask_bcrypt
+flask_sqlalchemy
+PyJWT
+flask_cors
+flask_migrate
+psycopg2

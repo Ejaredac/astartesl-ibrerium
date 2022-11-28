@@ -1,0 +1,35 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+		body { background: #e8f1f9; }
+	</style>
+{% endblock %}
+{% block title %}
+Astartes Librerium - La libreria
+{% endblock %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <a href="{{url_for('inicio')}}">Astartes Librerium - La libreria</a>
+      
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+        <h1>{{libro.titulo}}</h1>
+        <h2>De: {{libro.autor}}</h2>
+        <h3>Genero:{{libro.genero}}</h3>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

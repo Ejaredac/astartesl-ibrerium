@@ -1,0 +1,39 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{ super() }}
+	<style>
+		body { background: #e8f1f9; }
+	</style>
+{% endblock %}
+{% block title %}
+Imagenes
+{% endblock %}
+
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+      <a href="{{url_for('inicio')}}">Astartes Librerium - La libreria</a>
+      
+  </div>
+</nav>
+<h1 class="">{{mensaje}}</h1>
+<div class="container">
+  <div class="row">
+    <h1>{{pop}}</h1>
+    <div class="col-md-10 col-lg-8 mx-lg-auto mx-md-auto">
+
+      <h1 class="pt-5 pb-2">Imagenes</h1>
+
+      {{ wtf.quick_form(forma) }}
+
+      
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
